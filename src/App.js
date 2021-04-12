@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Navigation from "./components/Navigation";
 import Resume from "./components/Resume";
 
 function App() {
@@ -12,15 +11,15 @@ function App() {
 
   return (
     <div>
-      <Header></Header>
-      <Navigation
+      <Header
         aboutmeSelected={aboutmeSelected}
         setAboutmeSelected={setAboutmeSelected}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
         resumeSelected={resumeSelected}
         setResumeSelected={setResumeSelected}
-      ></Navigation>
+      ></Header>
+
       <main>
         {contactSelected ? (
           <Contact></Contact>
