@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { zoomIn } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 import { validateEmail } from "../../utils/helpers";
 
 function Contact() {
@@ -7,6 +9,13 @@ function Contact() {
     email: "",
     message: "",
   });
+
+  const styles = {
+    zoomIn: {
+      animation: "x 1s",
+      animationName: Radium.keyframes(zoomIn, "zoomIn"),
+    },
+  };
 
   const [errorMessage, setErrorMessage] = useState("");
   const { name, email, message } = formState;
@@ -39,7 +48,10 @@ function Contact() {
 
   return (
     <section>
-      <h1 data-testid="h1tag">Contact Me</h1>
+      <StyleRoot>
+        <h1 style={styles.zoomIn}>Contact Me</h1>
+      </StyleRoot>
+
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
@@ -79,9 +91,7 @@ function Contact() {
             <p className="error-text">{errorMessage}</p>
           </div>
         )}
-        <button data-testid="button" type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
     </section>
   );

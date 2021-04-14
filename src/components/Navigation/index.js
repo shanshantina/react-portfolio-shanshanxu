@@ -1,65 +1,88 @@
 import React from "react";
+import { zoomIn } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 function Navigation(props) {
   const {
     aboutmeSelected,
     setAboutmeSelected,
+    projectSelected,
+    setProjectSelected,
     contactSelected,
     setContactSelected,
     resumeSelected,
     setResumeSelected,
   } = props;
 
+  const styles = {
+    zoomIn: {
+      animation: "x 1s",
+      animationName: Radium.keyframes(zoomIn, "zoomIn"),
+    },
+  };
+
   return (
     <nav>
-      <ul className="flex-row">
-        <li className="mx-2">
-          <a
-            href="#about"
-            className={`${aboutmeSelected && "navActive"}`}
-            onClick={() => {
-              setAboutmeSelected(true);
-              setContactSelected(false);
-              setResumeSelected(false);
-            }}
+      <StyleRoot>
+        <ul className="flex-row">
+          <li className="mx-2" style={styles.zoomIn}>
+            <a
+              href="#about"
+              className={`${aboutmeSelected && "navActive"}`}
+              onClick={() => {
+                setAboutmeSelected(true);
+                setProjectSelected(false);
+                setContactSelected(false);
+                setResumeSelected(false);
+              }}
+            >
+              About Me
+            </a>
+          </li>
+          <li className={`mx-2 ${projectSelected && "navActive"}`} style={styles.zoomIn}>
+            <span
+              onClick={() => {
+                setProjectSelected(true);
+                setContactSelected(false);
+                setResumeSelected(false);
+                setAboutmeSelected(false);
+              }}
+            >
+              Portfolio
+            </span>
+          </li>
+          <li
+            className={`mx-2 ${contactSelected && "navActive"}`}
+            style={styles.zoomIn}
           >
-            About Me
-          </a>
-        </li>
-        <li className="mx-2 'navActive'">
-          <span
-            onClick={() => {
-              setContactSelected(false);
-              setResumeSelected(false);
-              setAboutmeSelected(false);
-            }}
+            <span
+              onClick={() => {
+                setContactSelected(true);
+                setProjectSelected(false);
+                setResumeSelected(false);
+                setAboutmeSelected(false);
+              }}
+            >
+              Contact
+            </span>
+          </li>
+          <li
+            className={`mx-2 ${resumeSelected && "navActive"}`}
+            style={styles.zoomIn}
           >
-            Portfolio
-          </span>
-        </li>
-        <li className={`mx-2 ${contactSelected && "navActive"}`}>
-          <span
-            onClick={() => {
-              setContactSelected(true);
-              setResumeSelected(false);
-              setAboutmeSelected(false);
-            }}
-          >
-            Contact
-          </span>
-        </li>
-        <li className={`mx-2 ${resumeSelected && "navActive"}`}>
-          <span
-            onClick={() => {
-              setResumeSelected(true);
-              setContactSelected(false);
-              setAboutmeSelected(false);
-            }}
-          >
-            Resume
-          </span>
-        </li>
-      </ul>
+            <span
+              onClick={() => {
+                setResumeSelected(true);
+                setProjectSelected(false);
+                setContactSelected(false);
+                setAboutmeSelected(false);
+              }}
+            >
+              Resume
+            </span>
+          </li>
+        </ul>
+      </StyleRoot>
     </nav>
   );
 }

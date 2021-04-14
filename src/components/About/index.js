@@ -1,9 +1,22 @@
 import React from "react";
+import { zoomIn } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 function About() {
+  const styles = {
+    zoomIn: {
+      animation: "x 1s",
+      animationName: Radium.keyframes(zoomIn, "zoomIn"),
+    },
+  };
+
   return (
     <section className="my-5">
-      <h1 id="about">About Me</h1>
+      <StyleRoot>
+        <h1 id="about" style={styles.zoomIn}>
+          About Me
+        </h1>
+      </StyleRoot>
       <img
         src={process.env.PUBLIC_URL + "/assets/pic/self.png"}
         className="my-2"

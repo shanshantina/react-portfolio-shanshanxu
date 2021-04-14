@@ -1,9 +1,21 @@
 import React from "react";
+import { zoomIn } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 
 function Resume() {
+  const styles = {
+    zoomIn: {
+      animation: "x 1s",
+      animationName: Radium.keyframes(zoomIn, "zoomIn"),
+    },
+  };
+
   return (
     <section>
-      <h1>Resume</h1>
+      <StyleRoot>
+        <h1 style={styles.zoomIn}>Resume</h1>
+      </StyleRoot>
+
       <h3>
         Download my{" "}
         <a
