@@ -5,8 +5,11 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
+  --gradient: linear-gradient(90deg, hsla(0, 100%, 97%, 1) 2%, hsla(0, 44%, 96%, 1) 50%, hsla(0, 100%, 97%, 1) 100%);
+  --header: linear-gradient(90deg, hsla(0, 99%, 73%, 1) 0%, hsla(0, 100%, 85%, 1) 50%, hsla(0, 99%, 73%, 1) 100%);
+  --primary: #331100;
+  --text: #F0F2CB;
+  --secondary: #fafafa;
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #000000;
@@ -27,6 +30,7 @@ body {
   min-height: 100%;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -34,10 +38,26 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: var(--dark);
-  color: var(--light);
+  background-image: var(--gradient);
+  color: var(--primary);
   font-family: 'Poiret One', cursive;
+}
 
+.footer {
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  font-size: 40px;
+  position: fixed;
+}
+
+.footer a {
+  margin: 0 40px;
+  color: var(--primary)
+}
+
+.project-row {
+  gap: 70px;
 }
 
 h1,
@@ -48,41 +68,25 @@ h5,
 h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  margin: 5px 0;
+  margin: 25px 0;
   line-height: 1.25;
 }
 
-h1 {
-  font-size: 2.25rem;
+
+.heading {
+  height: 12vw;
+  background-image: var(--header);
 }
 
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
 
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  line-height: 1.65;
 }
 
 a {
-  color: var(--light);
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
 }
@@ -96,7 +100,7 @@ header {
 }
 
 header a {
-  color: var(--light);
+  color: var(--primary);
 }
 
 button {
@@ -128,6 +132,7 @@ span[role="img"] {
   cursor: default;
 }
 
+
 form {
   width: 40%;
 }
@@ -154,8 +159,9 @@ nav a:hover {
   text-decoration: none;
 }
 
-nav  li {
-  cursor: pointer;
+span, .aboutMe {
+  font-size: 30px;
+  margin: 0 20px;
 }
 
 textarea {
@@ -177,96 +183,11 @@ textarea {
   flex-wrap: wrap;
 }
 
-.space-between {
-  justify-content: space-between;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
-}
-
-.mx-2 {
-  margin-right: var(--spacing-two);
-  margin-left: var(--spacing-two);
-}
-
-.my-1 {
-  margin-top: var(--spacing-one);
-  margin-bottom: var(--spacing-one);
-}
-
-.my-2 {
-  margin-top: var(--spacing-two);
-  margin-bottom: var(--spacing-two);
-}
-
-.my-5 {
-  margin-top: var(--spacing-five);
-  margin-bottom: var(--spacing-five);
-}
-
-.px-1 {
-  padding-right: var(--spacing-one);
-  padding-left: var(--spacing-one);
-}
-
-.px-2 {
-  padding-right: var(--spacing-two);
-  padding-left: var(--spacing-two);
-}
-
-.py-1 {
-  padding-top: var(--spacing-one);
-  padding-bottom: var(--spacing-one);
-}
-
-.py-2 {
-  padding-top: var(--spacing-two);
-  padding-bottom: var(--spacing-two);
-}
-
 .card {
   width: 25%;
   text-align: center;
 }
 
-.img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
-
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
-}
-
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
-}
-
-.modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
 
 button {
 	background: var(--primary);
@@ -286,8 +207,7 @@ a {
 	font-weight: 600;
 	padding: 2px 4px;
 	margin-left: -2px;
-	margin-right: -2px;
-	
+	margin-right: -2px;	
 }
 
 .navActive {

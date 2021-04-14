@@ -3,6 +3,7 @@ import Navigation from "../Navigation";
 import { zoomIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 
+
 function Header(props) {
   const {
     aboutmeSelected,
@@ -23,7 +24,7 @@ function Header(props) {
   };
 
   return (
-    <header className="flex-row px-1">
+    <header className="row justify-content-around align-items-center heading">
       <StyleRoot>
         <h1 style={styles.zoomIn}>Shanshan Xu</h1>
       </StyleRoot>

@@ -22,13 +22,13 @@ function Navigation(props) {
   };
 
   return (
-    <nav>
+    <nav className="row align-self-end">
       <StyleRoot>
         <ul className="flex-row">
           <li className="mx-2" style={styles.zoomIn}>
             <a
               href="#about"
-              className={`${aboutmeSelected && "navActive"}`}
+              className={`${aboutmeSelected && "navActive"}`, "aboutMe"}
               onClick={() => {
                 setAboutmeSelected(true);
                 setProjectSelected(false);

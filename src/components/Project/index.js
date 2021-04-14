@@ -16,7 +16,7 @@ function Project() {
         <h1 style={styles.zoomIn}>Portfolio</h1>
       </StyleRoot>
 
-      <div className="row">
+      <div className="row justify-content-center align-items-center project-row">
         <div className="card bg-dark text-white">
           <img
             src={process.env.PUBLIC_URL + "/assets/project/0.JPG"}

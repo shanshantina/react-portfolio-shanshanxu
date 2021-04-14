@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <StyleRoot>
-      <section style={styles.zoomIn}>
+      <section style={styles.zoomIn} className="footer">
         <a
           href="https://github.com/Shanshantina"
           target="_blank"
