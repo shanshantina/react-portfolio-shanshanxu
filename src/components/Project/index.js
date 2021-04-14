@@ -38,7 +38,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
@@ -64,7 +64,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
@@ -90,7 +90,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
@@ -116,7 +116,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
@@ -142,7 +142,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
@@ -168,7 +168,7 @@ function Project() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github"></i>
             </a>
           </div>
         </div>
