@@ -1,8 +1,5 @@
 import React from "react";
 import Navigation from "../Navigation";
-import { zoomIn } from "react-animations";
-import Radium, { StyleRoot } from "radium";
-
 
 function Header(props) {
   const {
@@ -16,18 +13,10 @@ function Header(props) {
     setResumeSelected,
   } = props;
 
-  const styles = {
-    zoomIn: {
-      animation: "x 1s",
-      animationName: Radium.keyframes(zoomIn, "zoomIn"),
-    },
-  };
-
   return (
     <header className="row justify-content-around align-items-center heading">
-      <StyleRoot>
-        <h1 style={styles.zoomIn}>Shanshan Xu</h1>
-      </StyleRoot>
+      <h1>Shanshan Xu</h1>
+
       <Navigation
         aboutmeSelected={aboutmeSelected}
         setAboutmeSelected={setAboutmeSelected}

@@ -7,7 +7,7 @@ import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 
 function App() {
-  const [aboutmeSelected, setAboutmeSelected] = useState(false);
+  const [aboutmeSelected, setAboutmeSelected] = useState(true);
   const [projectSelected, setProjectSelected] = useState(false);
   const [contactSelected, setContactSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);

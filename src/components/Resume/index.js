@@ -19,6 +19,7 @@ function Resume() {
       <h3>
         Download my{" "}
         <a
+          className="resume"
           href={
             process.env.PUBLIC_URL + "/assets/document/resume-shanshanxu.pdf"
           }
@@ -31,7 +32,7 @@ function Resume() {
       <div className="row justify-content-around align-items-center">
         <div className="col-5">
           <h2>Front-end Proficiencies</h2>
-          <ul>
+          <ul className="skill">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -43,7 +44,7 @@ function Resume() {
 
         <div className="col-5">
           <h2>Back-end Proficiencies</h2>
-          <ul>
+          <ul className="skill">
             <li>APIs</li>
             <li>Node</li>
             <li>Express</li>

@@ -13,12 +13,12 @@ function About() {
   return (
     <section>
       <StyleRoot>
-        <h1 id="about" style={styles.zoomIn}>
+        <h1 style={styles.zoomIn}>
           About Me
         </h1>
       </StyleRoot>
-      <div className="row justify-content-center">
-        <div className="col-3">
+      <div className="row justify-content-around">
+        <div className="col-3 row align-items-center">
           <img
             src={process.env.PUBLIC_URL + "/assets/pic/self.png"}
             style={{ width: "100%" }}

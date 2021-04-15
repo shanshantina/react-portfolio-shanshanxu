@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { zoomIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import { validateEmail } from "../../utils/helpers";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -30,7 +31,7 @@ function Contact() {
       }
     } else {
       if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required.`);
+        setErrorMessage(`${capitalizeFirstLetter(e.target.name)} is required.`);
       } else {
         setErrorMessage("");
       }
