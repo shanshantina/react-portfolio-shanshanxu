@@ -24,7 +24,7 @@
 
    [Shanshan Xu Porfolio](https://shanshantina.github.io/react-portfolio-shanshanxu/)
 
-   ![demo](./public/assets/pic/demo.gif)
+   ![demo](./assets/pic/demo.gif)
 
   React Portfolio is a single-page application portfolio for myself:
   1. When user loads the portfolio, then user is presented with a page containing a header, a section for content, and a footer.  
