@@ -14,7 +14,12 @@ function Header(props) {
   } = props;
 
   return (
-    <header className="row justify-content-around align-items-center heading">
+    <header
+      className="row justify-content-around align-items-center heading"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/pic/autumn.png"})`,
+      }}
+    >
       <h1>Shanshan Xu</h1>
 
       <Navigation

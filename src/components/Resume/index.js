@@ -22,7 +22,7 @@ function Resume() {
           className="resume"
           href={
             process.env.PUBLIC_URL + "/assets/document/resume-shanshanxu.pdf"
-          }
+          } download
           target="_blank"
           rel="noreferrer"
         >

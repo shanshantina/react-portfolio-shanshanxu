@@ -53,47 +53,57 @@ function Contact() {
         <h1 style={styles.zoomIn}>Contact Me</h1>
       </StyleRoot>
 
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+      <div className="row justify-content-center">
+        <form id="contact-form" onSubmit={handleSubmit} className="col-6">
           <div>
-            <input
-              type="text"
-              name="name"
-              defaultValue={name}
-              onBlur={handleChange}
-            />
+            <label htmlFor="name">Name:</label>
+            <div>
+              <input
+                type="text"
+                name="name"
+                defaultValue={name}
+                onBlur={handleChange}
+              />
+            </div>
           </div>
+          <div>
+            <label htmlFor="email">Email Address:</label>
+            <div>
+              <input
+                type="email"
+                name="email"
+                defaultValue={email}
+                onBlur={handleChange}
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <div>
+              <textarea
+                name="message"
+                defaultValue={message}
+                rows="5"
+                onBlur={handleChange}
+              />
+            </div>
+          </div>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <button type="submit">Submit</button>
+        </form>
+
+        <div className="col-4">
+        <img
+            src={process.env.PUBLIC_URL + "/assets/pic/coffee.png"}
+            style={{ width: "100%" }}
+            alt="Network people with different tools"
+          />
         </div>
-        <div>
-          <label htmlFor="email">Email Address:</label>
-          <div>
-            <input
-              type="email"
-              name="email"
-              defaultValue={email}
-              onBlur={handleChange}
-            />
-          </div>
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <div>
-            <textarea
-              name="message"
-              defaultValue={message}
-              rows="5"
-              onBlur={handleChange}
-            />
-          </div>
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button type="submit">Submit</button>
-      </form>
+      </div>
     </section>
   );
 }
