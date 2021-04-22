@@ -54,7 +54,7 @@ function Contact() {
       </StyleRoot>
 
       <div className="row justify-content-center">
-        <form id="contact-form" onSubmit={handleSubmit} className="col-6">
+        <form id="contact-form" onSubmit={handleSubmit} className="col-md-6">
           <div>
             <label htmlFor="name">Name:</label>
             <div>
@@ -96,7 +96,7 @@ function Contact() {
           <button type="submit">Submit</button>
         </form>
 
-        <div className="col-4">
+        <div className="col-md-4 contact-img">
         <img
             src={process.env.PUBLIC_URL + "/assets/pic/coffee.png"}
             style={{ width: "100%" }}

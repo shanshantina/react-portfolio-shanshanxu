@@ -6,13 +6,16 @@
   --boxTwo: rgba(0, 0, 0, 0.5);
   --formBorder: #c4c4c4;
   --formBack: #fff;
+  --clear: #ffffff00;
   --colorShadeA: rgb(51, 17, 0);
   --colorShadeB: rgba(255, 232, 232);
   --colorShadeC: rgb(253, 240, 240);
-  --gradient: linear-gradient(180deg, 
-                hsla(72, 100%, 98%, 0.9) 0%, 
-                hsla(62, 57%, 92%, 0.9) 50%, 
-                hsla(72, 100%, 98%, 0.9) 100%);
+  --gradient: linear-gradient(
+    180deg,
+    hsla(72, 100%, 98%, 0.9) 0%,
+    hsla(62, 57%, 92%, 0.9) 50%,
+    hsla(72, 100%, 98%, 0.9) 100%
+  );
   --shadow: 1px 1px 1px #331100, 1px 12px 6px rgba(16, 16, 16, 0.4),
     1px 14px 10px rgba(16, 16, 16, 0.2), 1px 16px 35px rgba(16, 16, 16, 0.2),
     1px 18px 60px rgba(16, 16, 16, 0.4);
@@ -33,6 +36,15 @@
 html,
 body {
   min-height: 100%;
+  position: relative;
+}
+
+.main-container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 70px;
 }
 
 main {
@@ -66,7 +78,7 @@ h6 {
 h1 {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600;
-  margin: 15px 0 30px 0;
+  margin: 15px 0 40px 0;
   line-height: 1.25;
   text-shadow: var(--shadow);
 }
@@ -84,7 +96,7 @@ p {
 
 /* header style */
 .heading {
-  height: 12vw;
+  min-height: 10vw;
   background-size: cover;
   background-position: center;
 }
@@ -116,15 +128,15 @@ span {
 }
 
 /* footer style */
-.footer {
+footer {
   text-align: center;
   width: 100%;
-  bottom: 0;
   font-size: 40px;
-  position: fixed;
+  position: absolute;
+  bottom: 0px;
 }
 
-.footer a {
+footer a {
   margin: 0 40px;
   color: var(--primary);
   text-decoration: none;
@@ -134,7 +146,7 @@ span {
   transition: all 0.5s linear;
 }
 
-.footer a:hover {
+footer a:hover {
   text-decoration: none;
   background-color: var(--primary);
   color: var(--secondary);
@@ -172,8 +184,10 @@ input:focus {
 }
 
 .card {
-  width: 25%;
+  width: 26%;
   text-align: center;
+  background-color: var(--clear);
+  border: none;
 }
 
 .card:hover .card-img {
@@ -189,7 +203,7 @@ input:focus {
 .card:hover .card-title,
 .card:hover .card-text {
   display: contents;
-  font-size: 26px;
+  font-size: 23px;
 }
 
 .card-title,
@@ -314,4 +328,179 @@ button:focus {
   list-style: none;
   margin: 8px 0;
   font-size: 22px;
+}
+
+/* media query for screen = < 1200px */
+@media screen and (max-width: 1200px) {
+  span {
+    font-size: 20px;
+    margin: 0 15px;
+  }
+
+  .heading h1,
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  #contact-form div {
+    margin: 13px 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 23px;
+  }
+
+  .skill li {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 38px;
+  }
+}
+
+/* media query for screen = < 980px */
+@media screen and (max-width: 980px) {
+  span {
+    font-size: 20px;
+    margin: auto;
+  }
+
+  .heading h1,
+  h1 {
+    font-size: 23px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  #contact-form div {
+    margin: 10px 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 20px;
+  }
+
+  .skill li {
+    font-size: 18px;
+  }
+
+  .card {
+    width: 29%;
+  }
+
+  .card:hover .card-title,
+  .card:hover .card-text {
+    font-size: 20px;
+  }
+}
+
+/* media query for screen = < 768px */
+@media screen and (max-width: 768px) {
+  .heading {
+    row-gap: 20px;
+  }
+
+  span {
+    font-size: 22px;
+    margin: auto;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 26px;
+  }
+
+  .heading nav {
+    display: contents;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  .about {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  #contact-form div {
+    margin: 10px 0;
+  }
+
+  .contact-img {
+    width: 55%;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .resume-container {
+    text-align: center;
+  }
+
+  .skill {
+    padding-inline-start: 0;
+  }
+}
+
+/* media query for screen = < 575px */
+@media screen and (max-width: 575px) {
+  span {
+    font-size: 18px;
+    margin: auto;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer {
+    font-size: 34px;
+  }
+}
+
+/* media query for screen = < 392px */
+@media screen and (max-width: 392px) {
+  footer {
+    font-size: 30px;
+  }
+
+  footer a {
+    padding: 0;
+    margin: 0 18px;
+  }
+
+  .card {
+    width: 100%;
+  }
 }

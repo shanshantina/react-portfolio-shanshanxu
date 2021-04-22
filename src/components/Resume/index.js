@@ -11,7 +11,7 @@ function Resume() {
   };
 
   return (
-    <section>
+    <section className='resume-container'>
       <StyleRoot>
         <h1 style={styles.zoomIn}>Resume</h1>
       </StyleRoot>
@@ -30,7 +30,7 @@ function Resume() {
         </a>
       </h3>
       <div className="row justify-content-around align-items-center">
-        <div className="col-5">
+        <div className="col-md-5">
           <h2>Front-end Proficiencies</h2>
           <ul className="skill">
             <li>HTML</li>
@@ -42,7 +42,7 @@ function Resume() {
           </ul>
         </div>
 
-        <div className="col-5">
+        <div className="col-md-5">
           <h2>Back-end Proficiencies</h2>
           <ul className="skill">
             <li>APIs</li>

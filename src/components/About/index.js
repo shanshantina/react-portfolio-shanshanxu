@@ -17,8 +17,9 @@ function About() {
           About Me
         </h1>
       </StyleRoot>
+
       <div className="row justify-content-around">
-        <div className="col-3 row align-items-center">
+        <div className="col-md-3 row align-items-center about">
           <img
             src={process.env.PUBLIC_URL + "/assets/pic/self.png"}
             style={{ width: "100%" }}
@@ -26,7 +27,7 @@ function About() {
           />
         </div>
 
-        <div className="col-8 row align-items-center">
+        <div className="col-md-8 row align-items-center">
           <p>
             Currently focus on Coding Bootcamp program at UofT SCS to prepare to
             be a web developer. <br></br>
