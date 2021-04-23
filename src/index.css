@@ -179,15 +179,12 @@ input:focus {
   box-shadow: 0 0 0.25rem var(--boxTwo);
 }
 
-.project-row {
-  gap: 70px;
-}
-
 .card {
   width: 26%;
   text-align: center;
   background-color: var(--clear);
   border: none;
+  margin: 20px;
 }
 
 .card:hover .card-img {

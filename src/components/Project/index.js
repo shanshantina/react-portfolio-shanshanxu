@@ -58,7 +58,7 @@ function Project() {
         <h1 style={styles.zoomIn}>Portfolio</h1>
       </StyleRoot>
 
-      <div className="row justify-content-center align-items-center project-row">
+      <div className="row justify-content-center align-items-center">
         {projects.map((project, i) => (
           <div className="card" key={project.name}>
             <img
