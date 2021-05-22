@@ -38,6 +38,7 @@ function Resume() {
             <li>JavaScript</li>
             <li>jQuery</li>
             <li>React</li>
+            <li>GraphQL</li>
             <li>Bootstrap</li>
           </ul>
         </div>
@@ -50,6 +51,7 @@ function Resume() {
             <li>Express</li>
             <li>MySQL, Sequelize</li>
             <li>MongoDB, Mongoose</li>
+            <li>Apollo Server</li>
             <li>REST</li>
           </ul>
         </div>

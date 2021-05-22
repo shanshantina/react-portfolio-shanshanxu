@@ -5,6 +5,12 @@ import Radium, { StyleRoot } from "radium";
 function Project() {
   const projects = [
     {
+      name: "Dog Dash",
+      alt: "This is the dog dash and require to login.",
+      deployed: "https://dog-dash.herokuapp.com/",
+      github: "https://github.com/pro3gro3/walk-my-dog",
+    },
+    {
       name: "Tech Blog",
       alt: "This is a tech blog and require to login.",
       deployed: "https://tech-blog-shanshanxu.herokuapp.com/",
