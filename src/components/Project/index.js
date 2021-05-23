@@ -7,7 +7,7 @@ function Project() {
     {
       name: "Dog Dash",
       alt: "This is the dog dash and require to login.",
-      deployed: "https://project3-dogdash.herokuapp.com/",
+      deployed: "https://dog-dash.herokuapp.com/",
       github: "https://github.com/pro3gro3/walk-my-dog",
     },
     {
