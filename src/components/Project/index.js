@@ -44,11 +44,11 @@ function Project() {
       github: "https://github.com/uoft-project1-group5/cocktail-map",
     },
     {
-      name: "Simply Unused",
-      alt: "Signed up page with three introduction cards of using this site.",
-      deployed: "https://project2-simply-unused.herokuapp.com/",
-      github: "https://github.com/Bootcamp-Group5/simply-unused",
-    },
+      name: "Team Profile Generator",
+      alt: "A team profile webpage with all the team members summary",
+      deployed: "https://github.com/shanshantina/team-profile-generator/",
+      github: "https://github.com/shanshantina/team-profile-generator",
+    }
   ];
 
   const styles = {
